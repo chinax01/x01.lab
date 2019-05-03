@@ -1,6 +1,4 @@
-#RunPath = "py/fivechess/main.py"
-RunPath = "py/xiangqi/main.py"
-#RunPath = "py/temp.py"
+DIR = py 
+
 run:
-	python3 $(RunPath)
-	
+	cd $(DIR); make
