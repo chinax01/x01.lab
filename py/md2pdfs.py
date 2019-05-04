@@ -16,10 +16,9 @@ def md2pdfs(currdir='.'):
             pdffile = name + '.pdf'
             os.chdir(dir)
             print(os.getcwd() + '/' + f)
+            #cmd = "rm -f *pdf" # clear pdf files
             cmd = "pandoc '{0}' -o '{1}' --latex-engine=xelatex -V mainfont='PingFang SC' --template=template.tex".format(mdfile, pdffile)
             os.system(cmd)
         
-        
-
 if __name__ == '__main__':
     md2pdfs()
